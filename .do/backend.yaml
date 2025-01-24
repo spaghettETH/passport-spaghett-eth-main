@@ -1,0 +1,12 @@
+name: passport-backend
+
+services:
+- name: backend
+  github:
+    repo: megotickets/passport-spaghett-eth
+    branch: main
+    deploy_on_push: true
+  dockerfile_path: api/Dockerfile
+  http_port: 9000
+  routes:
+  - path: /

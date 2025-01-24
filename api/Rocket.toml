@@ -1,0 +1,9 @@
+[default]
+address = "0.0.0.0"
+keep_alive = 30
+
+[debug]
+port = 6006
+
+[release]
+port = 9000

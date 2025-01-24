@@ -1,0 +1,7 @@
+yarn task deploy $1
+yarn task passport/setproxy $1
+yarn task passport/mint $1
+yarn task passport/add-checkpoints-csv $1
+yarn task passport/checkpoints $1
+yarn task passport/sign-checkpoint $1
+yarn task passport/collection $1

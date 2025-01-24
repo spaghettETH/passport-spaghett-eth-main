@@ -1,0 +1,26 @@
+[package]
+name = "passport-api-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rocket = { version = "=0.5.1", features = ["json"] }
+chrono = { version = "0.4.38", features = ["serde"] }
+serde = { version = "1.0.152", features = ["derive"] }
+uuid = { version = "1.4.1", features = ["v4"] }
+mongodb = "2.6.0"
+bson = "2.6.1"
+dotenv = "0.15.0"
+schemars = "0.8.12"
+futures = "0.3"
+serde_json = "1.0"
+rust-argon2 = "1.0"
+random-string = "1.0.0"
+jwt = "0.16.0"
+sha2 = "0.10.7"
+hmac = "0.12.1"
+geojson = "0.24.1"
+ethers = "2.0.14"
+hex = "0.4.3"
+aes-gcm = "0.10.3"
+generic-array = "1.0.0"

@@ -1,0 +1,22 @@
+{
+  "name": "spaghetteth-qr",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "serve dist"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "qrcode": "^1.5.3",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "serve": "^14.2.1",
+    "vite": "^4.4.5"
+  }
+}

@@ -1,0 +1,3 @@
+yarn task deploy $1
+yarn task passport/setproxy $1
+yarn task resolver/setproxy $1

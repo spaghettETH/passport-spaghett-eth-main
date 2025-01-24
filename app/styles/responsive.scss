@@ -1,0 +1,92 @@
+@media screen and (max-width: 768px) {
+  .queue-container {
+    .queue-tooltip {
+      transform: translate(5%, -100%) !important;
+      &::after {
+        left: 63% !important;
+      }
+    }
+    .queue-indicator {
+      background: var(--color-error);
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(139, 251, 217, 1);
+      margin: 10px;
+      height: 0.6rem;
+      width: 0.6rem;
+      transform: scale(1);
+      animation: pulse-black 2s infinite;
+    }
+  }
+  .smaller-padding-bottom {
+    padding-bottom: 0 !important;
+  }
+  .smaller-xs {
+    button {
+      max-width: 180px;
+      span {
+        padding: 10px 10px !important;
+        font-size: 0.8rem;
+        img {
+          width: 120px;
+          height: 120px;
+          border-radius: 5px;
+        }
+      }
+      svg {
+        max-height: 20px !important;
+        width: auto;
+      }
+    }
+  }
+  .radio-inputs {
+    flex-wrap: wrap;
+  }
+}
+
+.big-title {
+  font-size: 3.8rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+.event-card-details .event-image,
+.event-card .event-image {
+  height: unset;
+  width: 100% !important;
+  border-radius: 15px;
+
+  img {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+.grid-container .grid-item .grid-img img {
+  min-height: 180px;
+}
+
+.radio-inputs {
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 992px) {
+  .login-content {
+    video {
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: screen;
+      transform: scale(1);
+    }
+  }
+}
+
+@media screen and (min-width: 993px) {
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .big-title {
+    font-size: 5rem;
+  }
+}

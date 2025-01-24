@@ -1,0 +1,6 @@
+yarn task passport/add-checkpoint $1
+yarn task passport/add-checkpoint $1
+yarn task passport/add-checkpoint $1
+yarn task passport/checkpoints $1
+yarn task passport/sign-checkpoint $1
+yarn task passport/collection $1

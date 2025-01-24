@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Read .env file and convert to -e arguments
+env_vars=$(cat .env | tr '\n' ' ')
+env_vars=${env_vars// / -e }
+
+docker run -e $env_vars -it --rm -p 3000:3000 --name bartobe-stands bartobe-stands
