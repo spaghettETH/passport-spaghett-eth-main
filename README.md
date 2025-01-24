@@ -1,16 +1,50 @@
-STEPS_
+# PASSPORT  
 
-- download the repo
-- Follow READMEs instructions in src/ , app/styles/ , contract/scripts/
-- navigate to contract/ folder and:
-  - create .env file with: 
+**PASSPORT** is a Proof of Attendance protocol developed by **Yomi.Digital** and **Spaghett-eth.com**.  
+It empowers conference organizers to create check-ins for talks, workshops, or sessions in their schedule.  
 
-  API_URL=<your database API URL>
-  SESSION=<your session token>
+For each check-in, QR codes are generated. These QR codes enable attendees to mint a **Passport SBT** (Soulbound Token) and update the SBT metadata with the corresponding check-in information.  
 
-  - npm install
-  - in checkpoints/ create a new <CSV_FILE_NAME>.csv file for a new event with batch of talk check-ins (see example.csv)
-  - navigate again to contract/ with terminal and run these 2 commands:
+---
 
-    - node scripts/api/create-qr-codes.js <CSV_FILE_NAME>
-    - node scripts/api/store-checkpoints.js <CSV_FILE_NAME>
+## How to Use  
+
+### Steps  
+
+1. **Clone the Repository**  
+   Download the repository to your local machine.  
+
+2. **Follow Setup Instructions**  
+   Refer to the README files in the following folders for detailed setup instructions:  
+   - `src/`  
+   - `app/styles/`  
+   - `contract/scripts/`  
+
+3. **Set Up the Contract Folder**  
+   Navigate to the `contract/` folder and:  
+   
+   - Create a `.env` file with the following variables:  
+     ```plaintext  
+     API_URL=<your database API URL>  
+     SESSION=<your session token>  
+     ```  
+   
+   - Run the following command to install dependencies:  
+     ```bash  
+     npm install  
+     ```  
+
+   - In the `checkpoints/` folder, create a new CSV file (`<CSV_FILE_NAME>.csv`) to define the event’s check-ins. Use the provided `example.csv` as a reference for formatting.  
+
+4. **Generate and Store QR Codes**  
+   Use the terminal to navigate back to the `contract/` folder and execute the following commands:  
+
+   - To generate QR codes for the check-ins:  
+     ```bash  
+     node scripts/api/create-qr-codes.js <CSV_FILE_NAME>  
+     ```  
+
+   - To store the generated checkpoints:  
+     ```bash  
+     node scripts/api/store-checkpoints.js <CSV_FILE_NAME>  
+     ```  
