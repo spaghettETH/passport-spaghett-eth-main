@@ -4,7 +4,9 @@ import Spiral from "~/components/icons/Spiral.vue";
 import CollectionIcon from "~/components/icons/CollectionIcon.vue";
 import ScanIcon from "~/components/icons/ScanIcon.vue";
 import LeaderboardIcon from "~/components/icons/LeaderboardIcon.vue";
+import CreateIcon from "~/components/icons/CreateIcon.vue";
 import ScanTab from "~/components/ScanTab.vue";
+import CreateQRTab from "~/components/CreateQRTab.vue";
 import NetWorld from "~/components/icons/NetWorld.vue";
 import Eyes from "~/components/icons/Eyes.vue";
 
@@ -151,6 +153,11 @@ useSeoMeta({
           <LeaderboardIcon class="tab-icon"/>
           <p class="text-semibold">Leaderboard</p>
         </div>
+        <div :class="{ 'text-color-pink': selectedTab === CREATE_QR }" class="tab-item"
+             @click="selectedTab = CREATE_QR">
+          <CreateIcon class="tab-icon"/>
+          <p class="text-semibold">Create QR</p>
+        </div>
       </div>
 
       <div class="d-flex align-items-center justify-content-center mt-2 w-100">
@@ -205,6 +212,10 @@ useSeoMeta({
           <LeaderboardTab/>
         </div>
 
+        <div v-if="!isLoading && selectedTab === CREATE_QR" class="w-100">
+          <CreateQRTab/>
+        </div>
+
       </div>
 
     </div>
@@ -234,6 +245,7 @@ import dataFormatting from "~/mixins/dataFormatting";
 const COLLECTION = 'COLLECTION'
 const SCAN = 'SCAN'
 const LEADERBOARD = 'LEADERBOARD'
+const CREATE_QR = 'CREATE_QR'
 
 export default {
   name: 'home-page',
